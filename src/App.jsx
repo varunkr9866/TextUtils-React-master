@@ -5,7 +5,6 @@ import About from './components/About';
 import React, { useState } from 'react';
 import Alert from './components/Alert';
 import {
-  BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
@@ -39,7 +38,6 @@ function App() {
   }
   return (
     <>
-    <Router>
     <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} key={new Date()} />
     <Alert alert={alert}/>
     <div className="container my-3">
@@ -54,7 +52,6 @@ function App() {
           </Route>
     </Switch>
     </div>
-    </Router>
     </> 
   );
 }
